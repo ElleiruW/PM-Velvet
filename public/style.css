@@ -1,0 +1,81 @@
+#DownStairs{
+	
+	background-color: lightgrey;
+	height: 50px;
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-size: 2vw;
+	padding: 5vw;
+	
+}
+#logo{
+	width: 70px;
+	height: 40px;
+	color: white;
+	padding: 5vw;
+}
+
+#design{
+	width: 90px;
+	height: 60px;
+	color: white;
+	padding: 5vw;
+}
+header{
+	
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+	background-color: lightgrey;
+
+}
+h1{
+	font-family: 'Lobster', cursive;
+	font-size: 10vw;
+	
+}
+
+h3{
+	font-family: 'Roboto', sans-serif;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	text-decoration: none;
+	padding: 5vw;
+	color: white;
+	background-color: grey;
+	border-radius: 10px;
+	
+	
+}
+#sub-list{
+	display: none;
+}
+
+ul{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	list-style-type: none;
+	text-decoration: none;
+	margin: 10px;
+	
+}
+li{
+	list-style-type: none;
+	text-decoration: none;
+	padding: 10%;
+	justify-content: space-between;
+	
+	
+}
+a{
+	color: white;
+	text-decoration: none;
+}
