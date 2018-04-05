@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+//use Symfony\Component\Validator\Constraints\UuidValidator;
+use Ramsey\Uuid\Uuid;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -60,6 +62,16 @@ class User
      * @ORM\Column(type="boolean")
      */
     private $active=false;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $emailToken;
+    
+    public function __construct(){
+        //use Symfony\Component\Validator
+        $this->setEmailToken(Uuid::uuid1());
+    }
 
     public function getId()
     {
@@ -134,6 +146,18 @@ class User
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getEmailToken(): ?string
+    {
+        return $this->emailToken;
+    }
+
+    public function setEmailToken(?string $emailToken): self
+    {
+        $this->emailToken = $emailToken;
 
         return $this;
     }

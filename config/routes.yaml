@@ -15,3 +15,9 @@ add_product:
 add_user:
     path: /add/user
     controller: App\Controller\UserController::addUser
+    
+user_activate:
+    path: /user/activate/{token}
+    controller: App\Controller\UserController::activateUser
+    requirements:
+         token: '[a-z0-9-]+'
