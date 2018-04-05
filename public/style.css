@@ -73,9 +73,16 @@ li{
 	padding: 10%;
 	justify-content: space-between;
 	
-	
 }
 a{
 	color: white;
 	text-decoration: none;
 }
+
+.alert-danger {
+    color: #721c24;
+    background-color: white;
+    border-color: #f5c6cb;
+}
+
+

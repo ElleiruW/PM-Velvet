@@ -1,5 +1,5 @@
 <header>
-<img id="design" alt="Logo" src="img/logo.png">
+<img id="design" alt="Logo" src="/img/logo.png">
 <div>
 
 
@@ -8,3 +8,13 @@
 </div>
 
 </header>
+{% set infoMessages = app.flashes('info') %}
+{% if infoMessages is not empty %}
+<div class="container">
+	{% for message in infoMessages %}
+		<p class="bg-success p-1">{{ message }}</p>
+	{% endfor %}	
+	
+
+</div>
+{% endif %}
