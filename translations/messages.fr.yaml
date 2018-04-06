@@ -1,0 +1,39 @@
+HEADER:
+    HOME: Accueil
+    PRODUCT: Projets
+    LIST_PRODUCT: Lister les Projets
+    ADD_PRODUCT: Ajouter Projets
+    LOGIN: Connection
+    REGISTER: Enregistrer
+    LOCALE:
+        ITEM: LANGUES
+        FR: French
+HOMEPAGE.TITLE: Accueil
+ADD_PRODUCT:
+    TITLE: Ajouter votre projet
+    INFO: Vous créez une nouvelle page.
+LIST_PRODUCT:
+    TITLE:     
+REGISTER:
+    INFO: Enregistrements
+    TITLE: Enregistrez-vous.    
+FORM:
+    PRODUCT:
+        NAME: 'Le nom du projet *'
+        DESCRIPTION: Description du projet
+        VERSION: 'La version du projet *'
+        SUBMIT: Envoyer
+        PLACEHOLDER: 
+            NAME: Nom
+            DESCRIPTION: Description
+            VERSION: 0.0.0
+    USER:
+        USERNAME: Pseudo
+        FIRSTNAME: Prénom
+        LASTNAME: Nom
+        EMAIL: Email
+        PASSWORD: 
+            FIRST: Mot de passe
+            SECOND: Confirmez 
+        SUBMIT: ENVOYER          
+          

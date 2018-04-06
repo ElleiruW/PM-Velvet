@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% for value in product %}
+
+<div class="card">
+  <h5 class="card-header">{{ value.name }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ value.version }}</h5>
+    <p class="card-text">{{ value.description }}</p>
+    <a href="#" class="btn btn-primary">Details</a>
+  </div>
+</div>	
+
+{% endfor %}
+{% endblock %}

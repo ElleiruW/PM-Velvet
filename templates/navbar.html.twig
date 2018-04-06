@@ -1,18 +1,27 @@
 <nav><ul>
-			<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('homepage') }}">HOME</a></button>
+			<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('homepage_translation') }}">{{ 'HEADER.HOME'|trans }}</a></button>
 		<div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            PROJECT
+            {{ 'HEADER.PRODUCT'|trans }}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">List Projects</a>
-            <a class="dropdown-item" href="{{ path('add_product') }}">Add Project</a>
+            <a class="dropdown-item" href="{{ path('list_product') }}">{{ 'HEADER.LIST_PRODUCT'|trans }}</a>
+            <a class="dropdown-item" href="{{ path('add_product') }}">{{ 'HEADER.ADD_PRODUCT'|trans }}</a>
           </div>
 		</div>
 	</ul>
 	<ul>
-		<button type="button" class="btn btn-secondary btn-sm"><a href="#">LOGIN</a></button>
-		<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('add_user') }}">REGISTER</a></button>
+		<div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ 'HEADER.LOCALE.ITEM'|trans }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{{ path (app.request.attributes.get('_route'), {'_locale': 'en'}) }}">{{ 'HEADER.LOCALE.EN'|trans }}</a>
+            <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), {'_locale': 'fr'}) }}">{{ 'HEADER.LOCALE.FR'|trans }}</a>
+          </div>
+		</div>
+		<button type="button" class="btn btn-secondary btn-sm"><a href="#">{{ 'HEADER.LOGIN'|trans }}</a></button>
+		<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('add_user') }}">{{ 'HEADER.REGISTER'|trans }}</a></button>
 	</ul>
 	
 	

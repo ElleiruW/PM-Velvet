@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 
@@ -26,14 +27,15 @@ class ProductController
         
         $product = new Product;
         $builder = $factory->createBuilder(FormType::class, $product);
-        $builder->add('name', TextType::class)
-        ->add('description', TextareaType::class)
-        ->add('version', TextType::class)
+        $builder->add('name', TextType::class, ['label'=>'FORM.PRODUCT.NAME'])
+        ->add('description', TextareaType::class, ['label'=>'FORM.PRODUCT.DESCRIPTION'])
+        ->add('version', TextType::class, ['label'=>'FORM.PRODUCT.VERSION'])
         ->add('submit', SubmitType::class,
             [
                 'attr' => [
                     'class'=>'btn-block btn-success'
-                ]
+                ],
+                'label'=>'FORM.PRODUCT.SUBMIT'
             ]
             
             );
@@ -58,6 +60,22 @@ class ProductController
                     'formular' => $form->createView()
                 ]
             )   
+        );
+    }
+
+public function listProduct(Environment $twig, ObjectManager $manager){
+    
+    $productRepository=$manager->getRepository(Product::class);
+    
+    $product=$productRepository->findAll();
+    
+    return new Response(
+        $twig ->render(
+            'Product/listProduct.html.twig',
+            [
+                'product'=>$product
+            ]
+           )
         );
     }
 }

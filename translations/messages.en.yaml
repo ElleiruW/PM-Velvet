@@ -1,0 +1,39 @@
+HEADER:
+    HOME: Home
+    PRODUCT: Projects
+    LIST_PRODUCT: List Projects
+    ADD_PRODUCT: Add Projects
+    LOGIN: Login
+    REGISTER: Register
+    LOCALE:
+          ITEM: LAGUAGES
+          EN: English
+HOMEPAGE.TITLE: Homepage
+ADD_PRODUCT:
+    TITLE: Add project
+    INFO: You're creating a new project. Please fill in form.
+REGISTER:
+    INFO: Please register.
+    TITLE: Register
+FORM:
+    PRODUCT:
+        NAME: 'The name of your project *'
+        DESCRIPTION: The project description
+        VERSION: 'The project version *'
+        SUBMIT: Submit
+        PLACEHOLDER: 
+            NAME: Name
+            DESCRIPTION: Description
+            VERSION: 0.0.0
+    USER:
+        USERNAME: Username
+        FIRSTNAME: Firstname
+        LASTNAME: Lastname
+        EMAIL: Email
+        PASSWORD:
+            FIRST: Please enter your password
+            SECOND: Confirm
+        SUBMIT: SUBMIT
+          
+           
+      
