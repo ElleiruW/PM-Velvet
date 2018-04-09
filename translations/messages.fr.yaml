@@ -4,6 +4,7 @@ HEADER:
     LIST_PRODUCT: Lister les Projets
     ADD_PRODUCT: Ajouter Projets
     LOGIN: Connection
+    LOGOUT: DECONNEXION
     REGISTER: Enregistrer
     LOCALE:
         ITEM: LANGUES

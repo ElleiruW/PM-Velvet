@@ -117,10 +117,12 @@ class UserController
         $token,
         ObjectManager $manager,
         UrlGeneratorInterface $urlGenerator,
-        SessionInterface $session){
+        SessionInterface $session,
+        RoleRepository $roleRepository){
         
             
         $userRepository=$manager->getRepository(User::class);
+     
         
   
            
@@ -130,6 +132,10 @@ class UserController
             }
         $user->setActive(true);
         $user->setEmailToken(null);
+        $user->setEmailToken(null);
+        $user->addRole($roleRepository->findOneByLabel('ROLE_ACTIVE'));
+        
+        
 
           
           $session->getFlashBag()->add('info', 'Your account has been activated');
@@ -160,5 +166,6 @@ class UserController
               )
            );
     }
+    
 }
 

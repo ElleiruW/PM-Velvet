@@ -6,7 +6,9 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="{{ path('list_product') }}">{{ 'HEADER.LIST_PRODUCT'|trans }}</a>
+            {% if is_granted('ROLE_ACTIVE') %}
             <a class="dropdown-item" href="{{ path('add_product') }}">{{ 'HEADER.ADD_PRODUCT'|trans }}</a>
+            {% endif %}
           </div>
 		</div>
 	</ul>
@@ -21,7 +23,7 @@
           </div>
 		</div>
 		{%  if app.user %}
-		<button type="button" class="btn btn-secondary btn-sm"><a href="#">LOGOUT</a></button>
+		<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('logout') }}">{{ 'HEADER.LOGOUT'|trans }}</a></button>
 		{% endif %}
 		{%  if not app.user %}
 		<button type="button" class="btn btn-secondary btn-sm"><a href="{{ path('login') }}">{{ 'HEADER.LOGIN'|trans }}</a></button>

@@ -3,6 +3,7 @@ HEADER:
     PRODUCT: Projects
     LIST_PRODUCT: List Projects
     ADD_PRODUCT: Add Projects
+    LOGOUT: Logout
     LOGIN: Login
     REGISTER: Register
     LOCALE:

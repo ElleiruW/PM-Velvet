@@ -55,5 +55,7 @@ user_activate:
          
 login:
     path: /login
-    controller:  App\Controller\UserController::login        
+    controller:  App\Controller\UserController::login 
+logout:
+    path: /logout  
          
