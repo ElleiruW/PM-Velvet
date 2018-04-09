@@ -52,3 +52,8 @@ user_activate:
     requirements:
          token: '[a-z0-9-]+'
          _locale: 'en|fr'
+         
+login:
+    path: /login
+    controller:  App\Controller\UserController::login        
+         

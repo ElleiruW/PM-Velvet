@@ -89,3 +89,24 @@ a{
 	margin-bottom: 50px;
 	width: 100%;
 }
+
+.username-available{color: green;}
+.username-unavailable{color:red;}
+
+ .p-1 {padding: 1em;}
+ .p-2 {padding: 2em;}
+ .p-3 {padding: 3em;}
+.p-4 {padding: 4em;}
+.p-5 {padding: 5em;}
+
+.tm-1 {margin-top: 5em;}
+.tm-2 {margin-top: 5em;}
+.tm-5 {margin-top: 5em;}
+.tm-10 {margin-top: 10em;}
+.bm-1 {margin-bottom: 5em;}
+.bm-2 {margin-bottom: 5em;}
+.bm-5 {margin-bottom: 5em;}
+.bm-10 {margin-bottom: 10em;}
+
+.b-warning {border-left: 4px solid #aa6708}
+

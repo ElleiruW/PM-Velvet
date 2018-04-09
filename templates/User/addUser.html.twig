@@ -3,12 +3,27 @@
 
 {% block body %}
 	
-	{{ form(formular) }}
-	
-	
+	<div class="container tm-5">
+    		<p class="bg-warning p-1 b-warning">
+    			{{ 'REGISTER.INFO'|trans }}
+    		</p>
+    		
+    		<div class="container-fluid tm-5 bm-5">
+    	
+    	{{ form(formular) }}
+    		</div>
+	</div>
  
 
 {% endblock %}
 
 
 {% block title %}Add User!{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+<<script type="text/javascript" src="/js/register.js">
+<!--
+
+//-->
+</script>
+{% endblock %}
