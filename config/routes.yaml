@@ -59,3 +59,11 @@ login:
 logout:
     path: /logout  
          
+product_details:
+    path: /product/details
+    controller: App\Controller\ProductController::detailProduct
+    
+    
+    
+    
+    

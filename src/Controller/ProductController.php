@@ -15,6 +15,9 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use App\Repository\ProductRepository;
+use App\Form\CommentType;
+use App\Entity\Comment;
 
 
 
@@ -63,20 +66,47 @@ class ProductController
         );
     }
 
-public function listProduct(Environment $twig, ObjectManager $manager){
-    
-    $productRepository=$manager->getRepository(Product::class);
-    
-    $product=$productRepository->findAll();
-    
-    return new Response(
-        $twig ->render(
-            'Product/listProduct.html.twig',
-            [
-                'product'=>$product
-            ]
-           )
-        );
+    public function listProduct(Environment $twig, ObjectManager $manager){
+        
+        $productRepository=$manager->getRepository(Product::class);
+        
+        $product=$productRepository->findAll();
+        
+        return new Response(
+            $twig ->render(
+                'Product/listProduct.html.twig',
+                [
+                    'product'=>$product
+                ]
+               )
+            );
     }
+
+    public function detailProduct(Environment $twig, FormFactoryInterface $formFactory, ProductRepository $productRepository, Request $request){
+        $id = $request->get('id');
+        
+        $productD=$productRepository->find($id);
+        
+        
+        
+        $comment = new Comment();
+        $form = $formFactory->create(
+            CommentType::class,
+            $comment,['stateless' => true]
+            );
+        return new Response(
+                $twig ->render(
+                    'Product/detailProduct.html.twig',
+                    [
+                        'product'=>$productD,
+                        'form' => $form->createView()
+                    ]
+                    )
+                );
+     }
+
+
 }
+
+
 

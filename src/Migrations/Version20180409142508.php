@@ -13,7 +13,7 @@ class Version20180409142508 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('INSERT INTO role(label) VALUE("ROLE_ACTIVE)');
+        $this->addSql('INSERT INTO role(label) VALUE("ROLE_ACTIVE")');
     }
 
     public function down(Schema $schema)

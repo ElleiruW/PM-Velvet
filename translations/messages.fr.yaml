@@ -14,7 +14,12 @@ ADD_PRODUCT:
     TITLE: Ajouter votre projet
     INFO: Vous créez une nouvelle page.
 LIST_PRODUCT:
-    TITLE:     
+    TITLE:   LISTE DES PROJETS 
+    DETAILS: PLUS DE DETAILLES
+PRODUCT_DETAILS:
+    TITLE: VOICI LES DETAILLES DU PROJET
+    DOWNLOAD: TELECHARGER
+    
 REGISTER:
     INFO: Enregistrements
     TITLE: Enregistrez-vous.    

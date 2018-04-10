@@ -9,9 +9,10 @@
   <div class="card-body">
     <h5 class="card-title">{{ value.version }}</h5>
     <p class="card-text">{{ value.description }}</p>
-    <a href="#" class="btn btn-primary">Details</a>
+    <a href="{{ path('product_details') }}?id={{  value.id}})" class="btn btn-primary">{{ 'LIST_PRODUCT.DETAILS'|trans }}</a>
   </div>
 </div>	
 
 {% endfor %}
+
 {% endblock %}

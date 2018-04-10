@@ -20,6 +20,7 @@ class Version20180409103912 extends AbstractMigration
         $this->addSql('ALTER TABLE user_role ADD CONSTRAINT FK_2DE8C6A3A76ED395 FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE user_role ADD CONSTRAINT FK_2DE8C6A3D60322AC FOREIGN KEY (role_id) REFERENCES role (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE user ADD salt VARCHAR(255) NOT NULL');
+        $this->addSql('INSERT INTO role(label) VALUE ("ROLE_USER")');
     }
 
     public function down(Schema $schema)

@@ -13,9 +13,15 @@ HOMEPAGE.TITLE: Homepage
 ADD_PRODUCT:
     TITLE: Add project
     INFO: You're creating a new project. Please fill in form.
+LIST_PRODUCT:
+    TITLE: LIST OF THE PROJECTS
+    DETAILS: MORE DETAILS
 REGISTER:
     INFO: Please register.
     TITLE: Register
+PRODUCT_DETAILS:
+     TITLE: HERE ARE THE DETAILS OF THE PROJECTS
+     DOWNLOAD: Download    
 FORM:
     PRODUCT:
         NAME: 'The name of your project *'

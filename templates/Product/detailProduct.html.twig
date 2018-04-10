@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+	<div >
+	<h2>{{ 'PRODUCT_DETAILS.TITLE'|trans }}</h2>
+	<h2>{{ product.name }}</h2>
+	<h2>{{ product.version }}</h2>
+    		
+	</div>
+
+	<div class="container fluid tm-5">
+	{% for comment in product.getComments() %}
+	{% set bClass = (loop.index0 is even ? 'b-success' : 'b-warning') %}
+		<div class="b-success row comment p-1">
+		<h4 class="bm-2">{{  comment.getAuthor().getUsername() }}</h4>
+		<p class="bm-1">
+			{{ comment.getComment }}
+		</p>
+    		<div class="row">
+    		{% for file in comment.getFiles() %}
+    		{% if file.getMimeType() |slice (0,6) == 'image/' %}
+    			<img
+    				class="img-responsive col-xs-12 col-md-12"
+    				alt="comment image"
+    				src="{{file.getFileUrl()}}" 
+    			>
+    		{%  else %}		
+    			<a href="{{ file.getFileURL() }}">
+    				<button class="btn btn-success">
+    					<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>
+    					{{ 'PRODUCT_DETAILS.DOWNLOAD' | trans }} {{ file.getName() }}
+    				</button>
+    			</a>
+    	{% endif %}			
+		{% endfor %}
+      {% endfor %}
+			</div>
+		
+		</div>	
+
+	</div>
+	<div class="container fluid tm-5">
+	{{ form(form) }}
+	</div>
+{% endblock %}
