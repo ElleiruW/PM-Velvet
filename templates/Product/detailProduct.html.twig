@@ -23,7 +23,7 @@
     		{% for file in comment.getFiles() %}
     		{% if file.getMimeType() |slice (0,6) == 'image/' %}
     			<img
-    				class="img-responsive col-xs-12 col-md-12"
+    				class="img-responsive col-xs-3 col-md-10"
     				alt="comment image"
     				src="{{file.getFileUrl()}}" 
     			>
@@ -45,4 +45,9 @@
 	<div class="container fluid tm-5">
 	{{ form(form) }}
 	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script src="/js/commentFileAdder.js" type="text/javascript"></script>
 {% endblock %}

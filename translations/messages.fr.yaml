@@ -8,7 +8,8 @@ HEADER:
     REGISTER: Enregistrer
     LOCALE:
         ITEM: LANGUES
-        FR: French
+        FR: Francais
+        EN: Anglais
 HOMEPAGE.TITLE: Accueil
 ADD_PRODUCT:
     TITLE: Ajouter votre projet

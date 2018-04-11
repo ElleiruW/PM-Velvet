@@ -9,6 +9,7 @@ HEADER:
     LOCALE:
           ITEM: LAGUAGES
           EN: English
+          FR: French
 HOMEPAGE.TITLE: Homepage
 ADD_PRODUCT:
     TITLE: Add project
